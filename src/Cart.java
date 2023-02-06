@@ -3,7 +3,7 @@ import java.util.List;
 
 public class Cart {
     private double total;
-    private List cartProducts;
+    private List<Product> cartProducts;
 
     public Cart() {
         this.total = 0;
