@@ -6,7 +6,23 @@ public class RegularBuyer extends Buyer {
 
     @Override
     void checkOut(PaymentMethod paymentMethod) {
+        if (paymentMethod.equals(PaymentMethod.CREDITCARD)) {
+            System.out.println((getCart().getTotal() + calculateShippingCost()) + " has been deducted from your card");
+        }
+        if (paymentMethod.equals(PaymentMethod.CASHonDELIVERY)) {
+            System.out.println("The amount  you must pay on delivery is " + (getCart().getTotal() + calculateShippingCost()));
+        }
 
+        /*for (Object product:getCart().getCartProducts()) {*//*not finished, cannot reach sellProduct method*//*
+//            getCart().getCartProducts();
+
+            if (paymentMethod.equals(PaymentMethod.CREDITCARD)) {
+                System.out.println((getCart().getTotal() + getShippingCost()) + " has been deducted from your card");
+            }
+            if (paymentMethod.equals(PaymentMethod.CASHonDELIVERY)) {
+                System.out.println("The amount  you must pay on delivery is " + (getCart().getTotal() + getShippingCost()));
+            }
+        }*/
     }
 
     @Override
